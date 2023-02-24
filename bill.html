@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function eg()
+      {
+        var_1=document.getElementById("ex");
+        var_1.innerHTML="THANK YOU FOR ORDERING";
+        var_1.style.fontSize='50px';
+        var_1.align="center";
+        var_1.style.marginTop="100px";
+        shoppingCart.clearCart();
+      }
+    </script>
+    <style>
+      @media screen and (max-width: 850px) {
+          #bill{
+            padding-top: 45px;
+          }
+          #printbill{
+            font-size: smaller;
+          }
+        }
+        a{
+            color: black;
+        }
+        body
+        {
+            background-color:white;
+        }
+        /* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+        /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {background-color: #ddd;}
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {display: block;}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand ml-5" href="HOME.HTML">
+            <img src="brand_img.jpg" height="60px" class="rounded-circle"></img>
+            <span class="font-weight-bold" style="font-family:Verdana, Geneva, Tahoma, sans-serif;color:#6b3a1b;">Food Order</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item pl-3">
+                <a class="nav-link active" aria-current="page" href="#">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-warning" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg></button>
+                      </form>
+                </a>
+              </li>
+              <li class="nav-item pl-3">
+                <a class="nav-link" href="offers.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
+                    <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                  </svg> Offers</a>
+              </li>
+              <li class="nav-item pl-3">
+                <a class="nav-link" href="help.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                  </svg> Help</a>
+              </li>
+              <li class="nav-item  pl-3">
+                <div class="nav-link" href="#">
+                    <div class="dropdown">
+                      <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                      </svg> <span id="profile"> Profile</span>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                      <div class="dropdown-content">
+                        <a href="#" data-toggle="modal" data-target="#profilemodal">Profile</a>
+                        <a href="LOGIN.html">Logout</a>
+                      </div>
+                    </div>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="modal fade" id="profilemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Profile Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modalbody">
+            <p>Name:<span id="modal-name"></span></p>  
+            <p>Number:<span id="modal-number"></span></p>
+            <p>Email:<span id="modal-email"></span></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div style="padding-top:6%" class="container" id="ex"><br><h1 style="color: black;font-family: 'Times New Roman', Times, serif;" id="bill">Bill</h1>
+        <div class="container text-light"  style="background-color: rgb(33, 31, 28);">
+            <pre>
+</pre>
+          <table class="show-cart table text-light" id="printbill">
+            
+          </table>
+          <div class="text-white">
+            To Pay: ₹<span class="total-cart"></span><a style="float:right;" type="button" class="btn btn-light" onclick="eg()" href="#">Order now</a>
+          </div>   
+                  <pre>
+
+                  </pre>
+              </div>
+        </div>    
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+    
+      <script>
+              profilechange=document.getElementById("profile")
+              profilechange.innerHTML="   "+sessionStorage.getItem("var2").toUpperCase()
+              modalnamevar=document.getElementById("modal-name")
+              modalnumbervar=document.getElementById("modal-number")
+              modalemailvar=document.getElementById("modal-email")
+              modalnamevar.innerHTML=" "+sessionStorage.getItem("var2").toUpperCase()
+              modalnamevar.style.fontWeight="bold"
+              modalnumbervar.innerHTML=" "+sessionStorage.getItem("var4")
+              modalnumbervar.style.fontWeight="bold"
+              modalemailvar.innerHTML=" "+sessionStorage.getItem("var6")
+              modalemailvar.style.fontWeight="bold"
+              var dict=[]
+              dict.push({name:sessionStorage.getItem("var2"),number:sessionStorage.getItem("var4"),email:sessionStorage.getItem("var6")})
+              storageEngine.setItem("dict1",dict)
+      </script>
+    
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      body {
+    overflow-x: hidden;
+    width:100%;
+      }
+       #div1
+      {
+        background-color: black;
+        position: fixed;
+        z-index: 1;
+        padding-top: 6%;
+        padding-right: 10px;
+      }
+      #div3{
+      
+        padding-left: 8%; 
+        padding-top: 2%;
+        padding-bottom: 2%;
+      }
+      @media only screen and (max-width: 1500px) 
+      {
+      .imgsize{
+        height:100px;
+        width: 130px;
+      }
+      .sizesmall{
+        font-size: xx-large;
+      }
+      .borderblack{
+        border-color: black;
+      }
+      #div1
+      {
+        background-color:white;
+        position: relative;
+        padding-top: 15%;
+        overflow-x: hidden;
+
+      }
+      .colortry{
+        color: black;
+        text-align: center;
+      }
+      #div2{
+        visibility: hidden;
+      }
+      #div3{
+        padding-top: 50px;
+        padding-left: 55px;
+
+      }
+      .textsmallclass{
+            font-size: small;
+          }
+      }
+        a{
+            color: black;
+        }
+        /* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+        /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {background-color: #ddd;}
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {display: block;}
+    </style>
+</head>
+<body data-spy="scroll">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand ml-5" href="HOME.HTML">
+            <img src="brand_img.jpg" height="60px" class="rounded-circle"></img>
+            <span class="font-weight-bold" style="font-family:Verdana, Geneva, Tahoma, sans-serif;color:#6b3a1b;">Food Order</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item pl-3">
+                <a class="nav-link active" aria-current="page" href="#">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-warning" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg></button>
+                      </form>
+                </a>
+              </li>
+              <li class="nav-item pl-3">
+                <a class="nav-link" href="offers.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
+                    <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                  </svg> Offers</a>
+              </li>
+              <li class="nav-item pl-3">
+                <a class="nav-link" href="help.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                  </svg> Help</a>
+              </li>
+              <li class="nav-item  pl-3">
+                <div class="nav-link" href="#">
+                    <div class="dropdown">
+                      <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                      </svg> <span id="profile"> Profile</span>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                      <div class="dropdown-content">
+                        <a href="#" data-toggle="modal" data-target="#profilemodal">Profile</a>
+                        <a href="index.html">Logout</a>
+                      </div>
+                    </div>
+
+              </li>
+              <li class="nav-item  pl-3">
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#cart"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                  </svg> Cart (<span class="total-count"></span>)</button>
+                <button class="clear-cart btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                  </svg> Clear Cart</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="empty">
+              <table class="show-cart table textsmallclass">
+                
+              </table>
+              <div>Total price: ₹<span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <a type="button" class="btn btn-dark" onclick="eg2()">Generate Bill</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="modal fade" id="profilemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Profile Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modalbody">
+            <p>Name:<span id="modal-name"></span></p>  
+            <p>Number:<span id="modal-number"></span></p>
+            <p>Email:<span id="modal-email"></span></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div>
+      <div class="row container-fluid" id="div1">
+        <div class="col-lg-4"  id="div3">
+        <img src="lapinoz.jpg" height="165px" width="264px" class="img-thumbnail" style="border:2px solid black"/>
+        </div>
+        <div class="col-lg-4 text-white p-4">
+            <h1 class="display-4 colortry font-weight-bold sizesmall">La Pino'z Pizza</h1>
+            <h6 class="text-white colortry">Pizzas, Pastas</h6>
+            <br>
+            <div class="row">
+                <div class="col-4"><button disabled="" class="btn btn-success btn-sm text-white colortry"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                  </svg> 4.2</button></div>
+                  <div class="col-3 text-white" style="font-size:small;">
+                    <p class="colortry">26 MINS</p>
+                  </div>
+                  <div class="col-5 text-white" style="font-size:small;">
+                    <p class="colortry">₹400 FOR TWO</p>
+                  </div>
+            </div>
+        </div>
+        <div class="col-lg-4 text-white p-4">
+            <fieldset class="border p-2 borderblack">
+                <legend  class="w-auto colortry font-weight-bold">OFFER</legend>
+                <p class="colortry"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="blue" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M177.595,155.193c-12.349,0-22.402,10.053-22.402,22.402c0,12.349,10.053,22.402,22.402,22.402    c12.349,0,22.402-10.053,22.402-22.402C199.996,165.246,189.944,155.193,177.595,155.193z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M334.406,312.005c-12.349,0-22.402,10.053-22.402,22.402c0,12.349,10.053,22.402,22.402,22.402    c12.349,0,22.402-10.053,22.402-22.402C356.808,322.057,346.755,312.005,334.406,312.005z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M491.153,256.001c13.617-14.953,19.283-35.681,14.427-56.967c-4.857-21.275-18.956-37.507-37.715-45.065    c5.786-19.383,1.882-40.516-11.726-57.579c-13.597-17.053-33.384-25.541-53.521-24.24c-3.205-19.962-15.883-37.321-35.539-46.794    c-19.645-9.451-41.128-8.575-58.749,1.389C296.79,10.151,277.833,0.011,256.011,0c-21.833,0-40.8,10.14-52.34,26.744    c-17.621-9.964-39.104-10.84-58.75-1.389c-19.656,9.473-32.333,26.832-35.539,46.794c-20.138-1.324-39.914,7.175-53.521,24.24    c-13.607,17.064-17.513,38.207-11.726,57.579c-18.759,7.57-32.859,23.791-37.715,45.065s0.81,42.014,14.428,56.966    C7.23,270.953,1.564,291.681,6.42,312.967c4.857,21.275,18.956,37.507,37.715,45.065c-5.786,19.383-1.882,40.516,11.726,57.579    c13.597,17.053,33.394,25.508,53.521,24.24c3.205,19.962,15.883,37.321,35.539,46.794c19.656,9.461,41.14,8.575,58.75-1.389    C215.212,501.86,234.178,512,256.012,512c21.821-0.011,40.778-10.151,52.318-26.744c17.611,9.954,39.093,10.84,58.75,1.389    c19.656-9.473,32.333-26.832,35.539-46.794c20.116,1.247,39.914-7.186,53.521-24.24c13.607-17.063,17.513-38.207,11.726-57.579    c18.759-7.57,32.859-23.791,37.715-45.065C510.438,291.692,504.771,270.953,491.153,256.001z M121.591,177.595    c0-30.878,25.126-56.004,56.004-56.004c30.878,0,56.004,25.126,56.004,56.004c0,30.878-25.126,56.004-56.004,56.004    C146.716,233.599,121.591,208.473,121.591,177.595z M189.473,346.285c-3.282,3.282-7.581,4.923-11.878,4.923    c-4.298,0-8.598-1.641-11.878-4.923c-6.563-6.563-6.563-17.195,0-23.758l156.812-156.812c6.563-6.563,17.195-6.563,23.758,0    c6.563,6.563,6.563,17.196,0,23.758L189.473,346.285z M334.406,390.411c-30.878,0-56.004-25.126-56.004-56.004    s25.126-56.004,56.004-56.004s56.004,25.126,56.004,56.004S365.285,390.411,334.406,390.411z"/>
+                        </g>
+                    </g>
+                    </svg> FREE DELIVERY</p>
+                <p class="colortry"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="blue" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M177.595,155.193c-12.349,0-22.402,10.053-22.402,22.402c0,12.349,10.053,22.402,22.402,22.402    c12.349,0,22.402-10.053,22.402-22.402C199.996,165.246,189.944,155.193,177.595,155.193z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M334.406,312.005c-12.349,0-22.402,10.053-22.402,22.402c0,12.349,10.053,22.402,22.402,22.402    c12.349,0,22.402-10.053,22.402-22.402C356.808,322.057,346.755,312.005,334.406,312.005z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M491.153,256.001c13.617-14.953,19.283-35.681,14.427-56.967c-4.857-21.275-18.956-37.507-37.715-45.065    c5.786-19.383,1.882-40.516-11.726-57.579c-13.597-17.053-33.384-25.541-53.521-24.24c-3.205-19.962-15.883-37.321-35.539-46.794    c-19.645-9.451-41.128-8.575-58.749,1.389C296.79,10.151,277.833,0.011,256.011,0c-21.833,0-40.8,10.14-52.34,26.744    c-17.621-9.964-39.104-10.84-58.75-1.389c-19.656,9.473-32.333,26.832-35.539,46.794c-20.138-1.324-39.914,7.175-53.521,24.24    c-13.607,17.064-17.513,38.207-11.726,57.579c-18.759,7.57-32.859,23.791-37.715,45.065s0.81,42.014,14.428,56.966    C7.23,270.953,1.564,291.681,6.42,312.967c4.857,21.275,18.956,37.507,37.715,45.065c-5.786,19.383-1.882,40.516,11.726,57.579    c13.597,17.053,33.394,25.508,53.521,24.24c3.205,19.962,15.883,37.321,35.539,46.794c19.656,9.461,41.14,8.575,58.75-1.389    C215.212,501.86,234.178,512,256.012,512c21.821-0.011,40.778-10.151,52.318-26.744c17.611,9.954,39.093,10.84,58.75,1.389    c19.656-9.473,32.333-26.832,35.539-46.794c20.116,1.247,39.914-7.186,53.521-24.24c13.607-17.063,17.513-38.207,11.726-57.579    c18.759-7.57,32.859-23.791,37.715-45.065C510.438,291.692,504.771,270.953,491.153,256.001z M121.591,177.595    c0-30.878,25.126-56.004,56.004-56.004c30.878,0,56.004,25.126,56.004,56.004c0,30.878-25.126,56.004-56.004,56.004    C146.716,233.599,121.591,208.473,121.591,177.595z M189.473,346.285c-3.282,3.282-7.581,4.923-11.878,4.923    c-4.298,0-8.598-1.641-11.878-4.923c-6.563-6.563-6.563-17.195,0-23.758l156.812-156.812c6.563-6.563,17.195-6.563,23.758,0    c6.563,6.563,6.563,17.196,0,23.758L189.473,346.285z M334.406,390.411c-30.878,0-56.004-25.126-56.004-56.004    s25.126-56.004,56.004-56.004s56.004,25.126,56.004,56.004S365.285,390.411,334.406,390.411z"/>
+                        </g>
+                    </g>
+                    </svg> 20% off up to ₹120 | Use FEDERALCC Above ₹249</p>
+             </fieldset>
+             
+        </div>
+      </div>
+    </div>
+      <div class="row" style="z-index: -1;padding-top: 25%;">
+        <!-- First Col Start -->
+        <div class="col-lg-2" id="div2">
+            <nav id="navbar-example3" class="navbar" style="position: fixed;">
+                <nav class="nav nav-pills flex-column">
+                  <a class="nav-link active" href="#toppicks">Top Picks</a>
+                  <a class="nav-link" href="#recommended">Recommended</a>
+                  <a class="nav-link" href="#B299">Buy 2 Pizza @ 299</a>
+                  <a class="nav-link" href="#B649">Buy 2 Pizza @ 649</a>
+                </nav>
+              </nav>
+        </div>
+                <!-- First Col End -->
+        <!-- Second Col Start -->
+        <div class="col-lg-7 text-left">
+          <div data-target="#navbar-example3" data-offset="0">
+              <h3 id="Toppicks" style="color:orange" class="pl-3">Top Picks</h3>
+              <hr>
+              <p>
+                  <div class="row text-left container">
+                      <div class="col-6">
+                          <b>Bestseller</b>
+                          <h4>Margherita pizza</h4>
+                          <p>&#x20B9; 140</p><br>
+                          <p>A Classic Cheesy Margharita. Can't Go Wrong.</p>
+                          <a href="#" data-name="Margherita-pizza" data-price="140" class="add-to-cart btn btn-outline-dark">Add to cart</a>
+                      </div>
+                      <div class="col-6 text-right p-4"><img  class="imgsize" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/thjprfbrh0nq66qrehub"  style="border-radius: 15px;" width="45%" alt=""></div>
+                  </div>
+              </p>
+              <hr>
+              <p>
+                  <div class="row text-left container">
+                      <div class="col-6">
+                          <b>Bestseller</b>
+                          <h4>Garden Delight Pizza</h4>
+                          <p>&#x20B9; 190</p><br>
+                          <p>A Classic Veg Pizza That Combines The Zing And Freshness Of Onions, Tomatoes And Capsicum</p>
+                          <a href="#" data-name="Garden-Delight-Pizza" data-price="190" class="add-to-cart btn btn-outline-dark">Add to cart</a>
+                      </div>
+                      <div class="col-6 text-right p-4"><img class="imgsize" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/stocialkwnws7s3etwm2"  style="border-radius: 15px;" width="45%" alt=""></div>
+                  </div>
+              </p>
+              <hr>
+              <p>
+                  <div class="row text-left container">
+                      <div class="col-6">
+                          <b>Bestseller</b>
+                          <h4>Cheezy-7 Pizza</h4>
+                          <p>&#x20B9; 255 </p><br>
+                          <p>An Exotic Combination Of White Mozarella, Cream, White Cheese, Monterey Jack, Cream Orange, Colby And Orange Cheddar Cheese</p>
+                          <a href="#" data-name="Cheezy-7-Pizza" data-price="255" class="add-to-cart btn btn-outline-dark">Add to cart</a>
+                      </div>
+                      <div class="col-6 text-right p-4"><img class="imgsize" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/zsztbqpe2inxyjxtrei6"  style="border-radius: 15px;" width="45%" alt=""></div>
+                  </div>
+              </p>
+              <!--Recommm-->
+              <h3 id="recommended"  style="color:orange" class="pl-3">Recommended</h3>
+              <hr>
+              <p>
+                  <div class="row text-left container">
+                      <div class="col-6">
+                          <h4>Paneer Tikka Butter Masala Pizza</h4>
+                          <p>&#x20B9; 255</p><br>
+                          <p>An India Speciality On A La Pinoz Pizza. Exotic Paneer Tikka, Onion, Capsicum & Red Paprika</p>
+                          <a href="#" data-name="Paneer-Tikka-Butter-Masala-Pizza" data-price="255" class="add-to-cart btn btn-outline-dark">Add to cart</a>
+                      </div>
+                      <div class="col-6 text-right p-4"><img class="imgsize" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ne7xgfbwbeahbubgln8v"  style="border-radius: 15px;" width="45%" alt=""></div>
+                  </div>
+              </p>
+              <hr>
+              <p>
+                  <div class="row text-left container">
+                      <div class="col-6">
+                          <h4>Pesto & Basil Special Pizza</h4>
+                          <p>&#x20B9; 255</p><br>
+                          <p>Capsicum,Jalapenos,Paneer With Pesto & Basil Dip</p>
+                          <a href="#" data-name="Pesto-&-Basil-Special-Pizza" data-price="255" class="add-to-cart btn btn-outline-dark">Add to cart</a>
+                      </div>
+                      <div class="col-6 text-right p-4"><img class="imgsize" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/bmapdc1bez6qappkamqv"  style="border-radius: 15px;" width="45%" alt=""></div>
+                  </div>
+              </p>
+              <hr>
+              <p>
+                  <div class="row text-left container">
+                      <div class="col-6">
+                          <h4>Tandoori Paneer Pizza</h4>
+                          <p>&#x20B9; 255</p><br>
+                          <p>Capsicum, Onion, Paneer, Sweet Corn In Korma Dip</p>
+                          <a href="#" data-name="Tandoori-Paneer-Pizza" data-price="255" class="add-to-cart btn btn-outline-dark">Add to cart</a>
+                      </div>
+                      <div class="col-6 text-right p-4"><img class="imgsize" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/habfco2a9kjztmtdpfqy"  style="border-radius: 15px;" width="45%" alt=""></div>
+                  </div>
+              </p>
+              <hr>
+              <p>
+                  <div class="row text-left container">
+                      <div class="col-6">
+                          <h4>Cheese Lovers Pizza</h4>
+                          <p>&#x20B9; 285</p><br>
+                          <p>Cheese Dip, Jalapenos Dip, Onion Capsicum, Paneer, Mushroom & Baby Corns</p>
+                          <a href="#" data-name="Cheese-Lovers-Pizza" data-price="285" class="add-to-cart btn btn-outline-dark">Add to cart</a>
+                      </div>
+                      <div class="col-6 text-right p-4"><img class="imgsize" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/u9dgvndlxagptke0nq1i"  style="border-radius: 15px;" width="45%" alt=""></div>
+                  </div>
+              </p>
+              <hr>
+              <p>
+                  <div class="row text-left container">
+                      <div class="col-6">
+                          <h4>English Retreat Pizza</h4>
+                          <p>&#x20B9; 285</p><br>
+                          <p>Olives,Red Paprika, Tomatoes, Paneer, Capsicum, Cheese, Jalapeno Dip. An English Special</p>
+                          <a href="#" data-name="English-Retreat-Pizza" data-price="285" class="add-to-cart btn btn-outline-dark">Add to cart</a>
+                      </div>
+                      <div class="col-6 text-right p-4"><img class="imgsize" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/zh0m9qzswjevneurgqhy"  style="border-radius: 15px;" width="45%" alt=""></div>
+                  </div>
+              </p>
+              <hr>
+              <p>
+                  <div class="row text-left container">
+                      <div class="col-6">
+                          <h4>La Pino'z Paneer Pizza</h4>
+                          <p>&#x20B9; 285</p><br>
+                          <p>A La Pinoz Special. Onion, Capsicum, Paneer, Sweet Corn & Olives With Cheese Dip</p>
+                          <a href="#" data-name="LaPino'z-Paneer-Pizza" data-price="285" class="add-to-cart btn btn-outline-dark">Add to cart</a>
+                      </div>
+                      <div class="col-6 text-right p-4"><img class="imgsize" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/kfho148oclrtpnbxjfnv"  style="border-radius: 15px;" width="45%" alt=""></div>
+                  </div>
+              </p>
+              <!--Buy at 299-->
+              <h3 id="B299"  style="color:orange" class="pl-3">Buy 2 Pizza @ 299</h3>
+              <hr>
+              <p>
+                  <div class="row text-left container">
+                      <div class="col-6">
+                          <h4>2 Regular Pizza Starting At Rs 299</h4>
+                          <p>&#x20B9; 299</p><br>
+                          <p>Choose any 2 of your Veg Regular Pizza</p>
+                          <a href="#" data-name="2-Regular-Pizza-Starting-At-Rs299" data-price="299" class="add-to-cart btn btn-outline-dark">Add to cart</a>
+                      </div>
+                      <div class="col-6 text-right p-4"><img class="imgsize" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/a8a2c17ec5a3704acdd823c76efb4044"  style="border-radius: 15px;" width="45%" alt=""></div>
+                  </div>
+              </p>
+              <hr>
+              <hr>
+              <p>
+                  <div class="row text-left container">
+                      <div class="col-6">
+                          <h4>2 Regular Pizza Starting At Rs 299</h4>
+                          <p>&#x20B9; 299</p><br>
+                          <p>Choose any 2 of your Italian Regular Pizza</p>
+                          <a href="#" data-name="2-Regular-Pizza-Starting-At-Rs299" data-price="299" class="add-to-cart btn btn-outline-dark">Add to cart</a>
+                      </div>
+                      <div class="col-6 text-right p-4"><img class="imgsize" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/a8a2c17ec5a3704acdd823c76efb4044"  style="border-radius: 15px;" width="45%" alt=""></div>
+                  </div>
+              </p>
+              <hr>
+              <p>
+              <!--Buy 3 at 649-->
+              <h3 id="B649" class="pl-3" style="color:orange">Buy 3 Pizza @ 649</h3>
+              <hr>
+              <p>
+                  <div class="row text-left container">
+                      <div class="col-6">
+                          <h4>3 Pizza Starting At Rs 649</h4>
+                          <p>&#x20B9; 649</p><br>
+                          <p>Choose any 3 of your Veg Regular Pizza</p>
+                          <a href="#" data-name="3-Pizza-Starting-At-Rs-649" data-price="649" class="add-to-cart btn btn-outline-dark">Add to cart</a>
+                      </div>
+                      <div class="col-6 text-right p-4"><img class="imgsize" src="https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/PHITE20210928014331565066/detail/af2c7789b463495096b6a5d53e66c095_1672735658606015916.webp"  style="border-radius: 15px;" width="45%" alt=""></div>
+                  </div>
+              </p>
+              <hr>
+
+          </div>
+      </div>
+  
+      <!-- Second Col End -->
+  </div>
+       
+    </div>
+    <script  src="./script.js"></script>
+    <script>
+        profilechange=document.getElementById("profile")
+        profilechange.innerHTML="   "+sessionStorage.getItem("var2").toUpperCase()
+        modalnamevar=document.getElementById("modal-name")
+        modalnumbervar=document.getElementById("modal-number")
+        modalemailvar=document.getElementById("modal-email")
+        modalnamevar.innerHTML=" "+sessionStorage.getItem("var2").toUpperCase()
+        modalnamevar.style.fontWeight="bold"
+        modalnumbervar.innerHTML=" "+sessionStorage.getItem("var4")
+        modalnumbervar.style.fontWeight="bold"
+        modalemailvar.innerHTML=" "+sessionStorage.getItem("var6")
+        modalemailvar.style.fontWeight="bold"
+        var dict=[]
+        dict.push({name:sessionStorage.getItem("var2"),number:sessionStorage.getItem("var4"),email:sessionStorage.getItem("var6")})
+        storageEngine.setItem("dict1",dict)
+</script>
+</body>
+</html>
